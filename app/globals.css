@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background: #0d1117;
+    color: #fff8e7;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 3px solid #d4a017 !important;
+    outline-offset: 2px !important;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(92, 51, 23, 0.25);
+    border-radius: 4px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+::selection {
+    background: rgba(212, 160, 23, 0.25);
+    color: #fff8e7;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    button,
+    [role="radio"],
+    [role="checkbox"],
+    [role="tab"] {
+          border-width: 2px !important;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+          opacity: 0;
+          transform: translateY(6px);
+    }
+    to {
+          opacity: 1;
+          transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%,
+  100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+  }
+    50% {
+          opacity: 1;
+          transform: scale(1.2);
+    }
+}
